@@ -12,7 +12,7 @@ const uploadProductImageLocale = async (req, res) => {
     throw new customError.BadRequestError("No file Uploaded");
   }
   const productImage = req.files.image;
-  if (!productImage.mimetypr.startsWith("image")) {
+  if (!productImage.mimetype.startsWith("image")) {
     throw new customError.BadRequestError("Please upload Image");
   }
   const maxSize = 1024 * 1024;
